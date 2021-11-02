@@ -3,7 +3,7 @@ import React from 'react'
 function FetchAPI() {
     return (
         <div>
-            <h2>Fetch API</h2>
+            <h2>16th oct, from 50 mins starts API </h2>
         </div>
     )
 }
