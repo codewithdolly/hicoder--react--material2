@@ -3,6 +3,7 @@ import "./App.scss";
 import {
   Counter,
   FetchAPI,
+  Parent,
   UseEffect2,
   UseState1,
 } from "./01-11-2021/Code/Components/Index";
@@ -12,8 +13,9 @@ function App() {
     <>
       {/* <Counter /> */}
       {/* <UseState1 /> */}
-      <UseEffect2 />
+      {/* <UseEffect2 /> */}
       {/* <FetchAPI /> */}
+      <Parent />
     </>
   );
 }

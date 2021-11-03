@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-const coWinUrl= "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=512&date=31-10-2021";
-
+const coWinUrl =
+  "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=512&date=31-10-2021";
 
 const person = {
   name: "R. Sinha",
@@ -14,9 +14,7 @@ const UseEffect2 = () => {
   const [count, setCout] = useState(0);
   const [name, setName] = useState("Radha");
   const [obj, setobj] = useState(person);
-  const [value, setValue] = useState(null)
-
-  console.log(data);
+  const [value, setValue] = useState(null);
 
   let manageState = () => {
     console.log("clicked");
@@ -31,25 +29,15 @@ const UseEffect2 = () => {
   };
 
   useEffect(() => {
-      manageState();
-      fetch(coWinUrl)
-      .then((res)=>
-        res.json()
-      )
-      .then((data)=> setValue(data));
-      
-  },[]) //if you want to call that pertucular useState then you can call within the bracket [],like [count, name, obj] and other state will call atlist one time.
+    manageState();
+    fetch(coWinUrl)
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  }, []); //if you want to call that pertucular useState then you can call within the bracket [],like [count, name, obj] and other state will call atlist one time.
   //if you want to call function only one time then give empty [] bracket.
 
   return (
     <>
-  <p>{data.map((obj)=>{
-    return(
-      <div>
-       { obj.name}
-      </div>
-    )
-  })}</p>
       <h2>Count : {count}</h2>
       <h3>Hey {name}</h3>
       <p>
@@ -66,6 +54,9 @@ const UseEffect2 = () => {
         and you are an Indian <b>{obj.indian}</b>.{" "}
       </p>
       {/* <button onClick={manageState}>incresed number</button> */}
+
+      <p style={{ backgroundColor: "red" }}>API</p>
+      <p>Need To use Map Function.</p>
     </>
   );
 };
